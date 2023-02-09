@@ -74,7 +74,6 @@ export default {
         },
 
         selectFruit(id) {
-            console.log(id);
             this.selectedFruit = this.fruits.find(x => x.id === id);
             this.showEdit = true;
         }
