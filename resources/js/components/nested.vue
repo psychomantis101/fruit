@@ -8,8 +8,8 @@
         @change="updateNesting"
     >
         <template #item="{ element }">
-            <li @dblclick="selectFruit(element.id)">
-                <p style="cursor: move">{{ element.name }}</p>
+            <li>
+                <p @dblclick="selectFruit(element.id)" style="cursor: move">{{ element.name }}</p>
                 <nested-draggable :fruits="element.children"/>
             </li>
         </template>
@@ -74,6 +74,7 @@ export default {
         },
 
         selectFruit(id) {
+            console.log(id);
             this.selectedFruit = this.fruits.find(x => x.id === id);
             this.showEdit = true;
         }
