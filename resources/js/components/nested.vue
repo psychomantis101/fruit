@@ -55,7 +55,6 @@ export default {
     },
     methods: {
         updateNesting() {
-            console.log('here');
             axios.patch(`api/update-nesting`, {
                 fruits:this.fruits
             })
